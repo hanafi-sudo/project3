@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal Otomotif Indonesia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('bg-otomotif.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Overlay hitam semi-transparan agar teks tetap terbaca */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(26, 26, 26, 0.9);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background: rgba(51, 51, 51, 0.9);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: rgba(26, 26, 26, 0.9);
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portal Otomotif Indonesia</h1>
+  </header>
+  <nav>
+    <a href="mobil.html">Mobil</a>
+    <a href="Motor.html">Motor</a>
+    <a href="review.html">Review</a>
+    <a href="video.html">Video</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="form.html">Form</a>
+    <a href="index.html">beranda</a>
+  </nav>
+  <div class="container">
+    <section id="mobil" class="card">
+      <h2>Mobil Terbaru</h2>
+      <p>Informasi tentang mobil-mobil terbaru yang hadir di Indonesia, selalu menyediakan varian mobil-mobil yang terbaru
+        jadi dengan ini sangat lah penting dengan belajar tentang merek mobil yang bagus dan ter jamin mesin
+      </p>
+    <li>
+     <a href="mobil.html">Mobil</a>
+    </li>
+    </section>
+
+    <section id="motor" class="card">
+      <h2>Motor Terkini</h2>
+      <p>Berita dan spesifikasi motor terbaru di pasar otomotif nasional, selalu memberikan informasi tentang mesiin mesin mobil dan motor supaaya
+        tidak mengecewakan pemakai dan selalu membuat pemakai selalu aman dalaaam mengendarai
+
+      </p>
+      <li>
+        <a href="Motor.html">Motor</a>
+      </li>
+    </section>
+
+    <section id="review" class="card">
+      <h2>Review Kendaraan</h2>
+      <p>Ulasan lengkap tentang mobil dan motor dari segi performa, desain, dan kenyamanan. dengan itu kami selalu memberi penjelasan tentang mesin mobil 
+        dan motor dengan teliti dan detail supaya memberikan keamanan bagi pengendara
+      </p>
+      <li>
+        <a href="review.html">review</a>
+      </li>
+    </section>
+    <section id="video" class="card">
+      <h2>Video</h2>
+      <video controls poster="modifninja r.mp4">
+        <source src="modifninja r.mp4" type="video/mp4" />
+        Browser Anda tidak mendukung video.
+      </video>
+    </section>
+
+    <section id="galeri" class="card">
+      <h2>Galeri Foto</h2>
+      <li>
+      <a href="galeri.html">galeri</a>
+      </li>
+    </section>
+
+    <section id="kontak" class="card">
+      <h2>Kontak Kami</h2>
+      <p>Email: babul.anam57@gmail.com<br />Telepon: 085876444784</p>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 Portal Otomotif Indonesia 2025s.</p>
+  </footer>
+</body>
+</html>
