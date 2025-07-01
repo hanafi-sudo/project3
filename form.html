@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>form pendaftaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('bg-otomotif.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Overlay hitam semi-transparan agar teks tetap terbaca */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(26, 26, 26, 0.9);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background: rgba(51, 51, 51, 0.9);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: rgba(26, 26, 26, 0.9);
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>form pendaftaran</h1>
+  </header>
+  <nav>
+    <a href="mobil.html">Mobil</a>
+    <a href="Motor.html">Motor</a>
+    <a href="review.html">Review</a>
+    <a href="video.html">Video</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="form.html">Form</a>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <h2>Formulir Pendaftaran</h2>
+      <form id="daftarForm">
+        <label for="nama">Nama Lengkap:</label><br />
+        <input type="text" id="nama" name="nama" required /><br /><br />
+  
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+  
+        <label for="telepon">No. Telepon:</label><br />
+        <input type="tel" id="telepon" name="telepon" required /><br /><br />
+  
+        <label for="kategori">Kategori Kendaraan:</label><br />
+        <select id="kategori" name="kategori">
+          <option value="Mobil">Mobil</option>
+          <option value="Motor">Motor</option>
+        </select><br /><br />
+  
+        <button type="submit">Daftar</button>
+      </form>
+  
+      <p id="pesan" style="color: green; font-weight: bold;"></p>
+    </div>
+  
+    <div class="card">
+      <h2>Data Pendaftar</h2>
+      <table border="1" width="100%" id="tabelPendaftar">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Telepon</th>
+            <th>Kategori</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script>
+    // Fungsi untuk menampilkan data ke tabel
+    function tampilkanData() {
+      const dataTersimpan = JSON.parse(localStorage.getItem('pendaftar')) || [];
+      const tbody = document.querySelector('#tabelPendaftar tbody');
+      tbody.innerHTML = '';
+  
+      dataTersimpan.forEach(p => {
+        const baris = document.createElement('tr');
+        baris.innerHTML = `
+          <td>${p.nama}</td>
+          <td>${p.email}</td>
+          <td>${p.telepon}</td>
+          <td>${p.kategori}</td>
+        `;
+        tbody.appendChild(baris);
+      });
+    }
+  
+    // Saat halaman dibuka, tampilkan data yang sudah tersimpan
+    window.addEventListener('DOMContentLoaded', tampilkanData);
+  
+    document.getElementById('daftarForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+  
+      const data = {
+        nama: document.getElementById('nama').value,
+        email: document.getElementById('email').value,
+        telepon: document.getElementById('telepon').value,
+        kategori: document.getElementById('kategori').value
+      };
+  
+      // Simpan ke localStorage
+      const dataTersimpan = JSON.parse(localStorage.getItem('pendaftar')) || [];
+      dataTersimpan.push(data);
+      localStorage.setItem('pendaftar', JSON.stringify(dataTersimpan));
+  
+      // Tampilkan pesan dan reset form
+      document.getElementById('pesan').textContent = "Pendaftaran berhasil disimpan!";
+      document.getElementById('daftarForm').reset();
+  
+      // Update tabel
+      tampilkanData();
+    });
+  </script>

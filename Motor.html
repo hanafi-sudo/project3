@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Motor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daftar Motor</h1>
+        <p>Motor Terbaru & Terpopuler di Indonesia</p>
+    </header>
+
+    <nav>
+        <a href="mobil.html">Mobil</a>
+        <a href="motor.html">Motor</a>
+        <a href="review.html">Review</a>
+        <a href="video.html">Video</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="form.html">form</a>
+        <a href="index.html">beranda</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <img src="yamahanmax.jpg" alt="Yamaha NMAX">
+            <div class="card-content">
+                <h3>Yamaha NMAX</h3>
+                <p>Skutik premium dengan desain modern, mesin 155cc VVA, dan fitur ABS untuk kenyamanan berkendara.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="motorpcx.jpg" alt="Honda PCX160">
+            <div class="card-content">
+                <h3>Honda PCX 160</h3>
+                <p>Motor matik elegan dengan mesin 160cc eSP+, cocok untuk harian dan perjalanan jauh.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="MOTORninja2.jpg" alt="Kawasaki Ninja 250">
+            <div class="card-content">
+                <h3>Kawasaki Ninja R 2 tak</h3>
+                <p>Sportbike populer dengan performa tinggi, desain agresif, dan cocok untuk pecinta kecepatan.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="motorsmash.jpg" alt="Suzuki GSX R150">
+            <div class="card-content">
+                <h3>smash 110cc</h3>
+                <p>Motor  entry-level dari Suzuki dengan fitur keyless dan bobot ringan untuk manuver lincah.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Portal Otomotif Indonesia
+    </footer>
+</body>
+</html>

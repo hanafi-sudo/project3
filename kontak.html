@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kontak Kami</h1>
+    </header>
+
+    <nav>
+        <a href="mobil.html">Mobil</a>
+        <a href="motor.html">Motor</a>
+        <a href="review.html">Review</a>
+        <a href="video.html">Video</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="form.html">form</a>
+    </nav>
+
+    <div class="container">
+        <h2>Hubungi Kami</h2>
+        <p>Silakan isi formulir di bawah ini untuk menghubungi tim Portal Otomotif Indonesia. Kami akan merespons secepat mungkin.</p>
+
+        <form action="#" method="post">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subjek">Subjek</label>
+            <input type="text" id="subjek" name="subjek">
+
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+            <input type="submit" value="Kirim Pesan">
+        </form>
+
+        <div class="contact-info">
+            <h3>Informasi Kontak</h3>
+            <p>Email: muchtarhanafi58@gmail.com</p>
+            <p>Telepon: +62 85876-444-784</p>
+            <p>Alamat: Jl. bawang,no.250 Jakarta, Indonesia</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Portal Otomotif Indonesia
+    </footer>
+</body>
+</html>
